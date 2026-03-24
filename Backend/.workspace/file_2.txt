@@ -1,0 +1,2 @@
+npm install react react-dom express body-parser cors mongoose dotenv
+npx create-react-app frontend

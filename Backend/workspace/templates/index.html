@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Welcome to Our E-commerce Site</h1>
+    <ul>
+        {% for product in products %}
+            <li>{{ product.name }} - ${{ product.price }}
+                <form action="{{ url_for('add_to_cart', product_id=product.id) }}" method="post">
+                    Quantity: <input type="number" name="quantity" value="1">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('cart') }}">View Cart</a>
+</body>
+</html>

@@ -1,0 +1,8 @@
+fastapi[all]
+uvicorn
+python-multipart
+sqlalchemy
+alembic
+passlib
+bcrypt
+pydantic

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+</head>
+<body>
+    <h1>Your Shopping Cart</h1>
+    <ul>
+        {% for item in items %}
+            <li>{{ item['quantity'] }} x {{ Product.query.get(item['product_id']).name }} - ${{ Product.query.get(item['product_id']).price * item['quantity'] }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Total: ${{ total }}</h2>
+</body>
+</html>
